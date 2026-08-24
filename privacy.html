@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>heeheehoho 개인정보처리방침</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    max-width: 720px; margin: 0 auto; padding: 32px 20px 80px;
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                 "Malgun Gothic", "Noto Sans KR", sans-serif;
+    line-height: 1.75; color: #2d2d2d; background: #fff;
+    word-break: keep-all;
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 4px; }
+  h2 { font-size: 1.15rem; margin-top: 2.2em; padding-top: .6em;
+       border-top: 1px solid #eee; }
+  h3 { font-size: 1rem; margin-top: 1.6em; color: #555; }
+  .date { color: #888; font-size: .9rem; margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0;
+          font-size: .93rem; display: block; overflow-x: auto; }
+  th, td { border: 1px solid #e5e5e5; padding: 8px 10px; text-align: left;
+           vertical-align: top; }
+  th { background: #faf7f2; font-weight: 600; white-space: nowrap; }
+  ul { padding-left: 1.2em; }
+  a { color: #d2691e; }
+  footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #eee;
+           color: #888; font-size: .85rem; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #16161a; color: #e6e6e6; }
+    h2 { border-top-color: #2c2c33; }
+    h3, .date, footer { color: #9a9aa0; }
+    th, td { border-color: #2c2c33; }
+    th { background: #1f1f25; }
+    footer { border-top-color: #2c2c33; }
+  }
+</style>
+</head>
+<body>
+
+<h1>heeheehoho 개인정보처리방침</h1>
+<p class="date">시행일: 2026년 8월 24일 (이전 시행일: 2026년 8월 12일)</p>
+
+<p>heeheehoho(이하 "앱")는 이용자의 개인정보를 소중히 다루며, 「개인정보 보호법」 등 관련 법령을 준수합니다. 본 방침은 앱이 어떤 정보를 어떻게 다루는지 설명합니다.</p>
+
+<p>앱은 <strong>회원가입이나 로그인 없이</strong> 이용할 수 있으며, 이름·생년월일·전화번호·이메일 등 이용자 본인을 식별하는 정보를 받지 않습니다.</p>
+
+<h2>1. 기기 안에만 저장되는 정보</h2>
+<p>아래 정보는 <strong>이용자의 기기 안에서만</strong> 쓰이며 외부로 전송되지 않습니다.</p>
+<table>
+  <tr><th>항목</th><th>수집 시점</th><th>이용 목적</th></tr>
+  <tr><td>반려동물 사진</td><td>이용자가 사진 촬영·선택을 직접 실행할 때</td><td>사진의 색·형태를 분석해 캐릭터 외형(털색·몸 모양)의 초기값을 제안</td></tr>
+  <tr><td>캐릭터 설정값 (이름, 생일, 성별, 털색, 몸 모양, 눈·코·입)</td><td>온보딩에서 입력할 때</td><td>캐릭터 표시</td></tr>
+  <tr><td>앱 이용 데이터 (보유·배치 아이템, 발자국·뼈다귀, 캐릭터 상태값)</td><td>앱 이용 중</td><td>게임 진행 상태 유지</td></tr>
+  <tr><td>산책 기록 (걸음 수, 이동 거리, 날짜)</td><td>산책 기능 이용 중</td><td>산책 보상 지급과 기록 표시</td></tr>
+</table>
+<p><strong>온보딩에서 고른 반려동물 사진은 업로드되지 않습니다.</strong> 분석은 전적으로 기기 안에서 계산으로 처리되며, 사진 파일은 기기에 남습니다.</p>
+
+<h2>2. 외부로 전송되는 정보</h2>
+<p>앱은 아래 기능에서만 정보를 외부로 보냅니다. 그 외에는 서버와 통신하지 않습니다.</p>
+
+<h3>2-1. 익명 식별자 (Google Firebase)</h3>
+<p>커뮤니티에서 "내가 쓴 글·댓글"과 "내가 추가한 이웃"을 구분하려면 기기를 알아볼 방법이 필요합니다. 그래서 앱을 처음 켤 때 Firebase가 <strong>익명 식별자(무작위 문자열)</strong> 하나를 발급해 저장합니다. 이름·이메일 등 본인을 알 수 있는 정보와는 연결되지 않으며, <strong>앱을 삭제하면 기기에서 사라집니다.</strong></p>
+<p>이 식별자는 본인이 올린 글만 본인이 지울 수 있도록 서버가 확인하는 데만 쓰입니다.</p>
+
+<h3>2-2. 닉네임과 프로필 (Google Firebase)</h3>
+<p>닉네임은 다른 이용자와 겹치지 않아야 하므로, 중복 확인과 예약을 위해 <strong>닉네임 문자열과 생성 시각</strong>을 Firebase Firestore에 저장합니다.</p>
+<p>또한 이웃 찾기를 위해 <strong>닉네임·캐릭터 이름·아바타·가입 시각</strong>을 가입자 명부에 올립니다. 다른 이용자의 "최근 가입" 목록과 닉네임 검색에 이 정보가 보입니다. 이웃을 추가하면 그 사실이 내 계정에만 저장됩니다(상대에게 알림이 가지 않습니다).</p>
+<p>캐릭터(강아지) 이름은 중복을 허용합니다.</p>
+
+<h3>2-3. 커뮤니티 게시물 (Google Firebase)</h3>
+<p>이용자가 커뮤니티에 글을 올릴 때만 아래가 전송·저장됩니다.</p>
+<table>
+  <tr><th>항목</th><th>저장 위치</th></tr>
+  <tr><td>게시물 사진</td><td>Firebase Storage</td></tr>
+  <tr><td>글 내용, 해시태그</td><td>Firebase Firestore</td></tr>
+  <tr><td>닉네임, 캐릭터 이름·품종·아바타</td><td>Firebase Firestore</td></tr>
+  <tr><td>이용자가 직접 적은 장소·지역 표시</td><td>Firebase Firestore</td></tr>
+  <tr><td>좋아요·공유 수, 작성 시각</td><td>Firebase Firestore</td></tr>
+</table>
+<p><strong>커뮤니티 게시물은 다른 이용자에게 공개됩니다.</strong> 공개를 원하지 않는 정보는 글·사진에 담지 마세요. 밸런스 게임 투표는 선택한 항목의 <strong>집계 숫자만</strong> 올라가며, 누가 무엇을 골랐는지는 전송되지 않습니다(내 선택은 기기 안에만 저장).</p>
+
+<h3>2-4. 날씨 조회 (기상청)</h3>
+<p>산책 화면에 현재 지역의 날씨를 표시하기 위해, <strong>현재 위치의 위도·경도</strong>를 기상청 단기예보 API(공공데이터포털, apis.data.go.kr)로 보냅니다. 좌표는 날씨를 받아오는 데만 쓰이고 앱이나 개발자가 따로 저장하지 않습니다.</p>
+
+<h3>2-5. 결제</h3>
+<p>발자국 충전은 Google Play 또는 App Store를 통해 진행됩니다. <strong>앱은 카드번호·계좌 등 결제수단 정보를 받거나 저장하지 않으며</strong>, 결제 처리와 영수증 관리는 각 스토어가 담당합니다.</p>
+
+<h3>2-6. 광고 (Google AdMob)</h3>
+<p>앱은 보상형 광고를 제공하며, 광고 송출은 Google AdMob이 담당합니다. <strong>광고는 이용자가 "광고 보고 보상 받기"를 직접 선택했을 때만 재생됩니다.</strong></p>
+<p>이용자가 광고를 볼 때 아래 정보가 Google로 전송될 수 있습니다.</p>
+<table>
+  <tr><th>항목</th><th>이용 목적</th></tr>
+  <tr><td>광고 식별자 (Android 광고 ID, iOS IDFA)</td><td>광고 게재 빈도 조절, 부정 클릭 방지, 맞춤 광고</td></tr>
+  <tr><td>IP 주소, 기기·OS 정보, 대략적인 지역</td><td>광고 송출과 사기 방지</td></tr>
+  <tr><td>광고 조회·클릭 기록</td><td>보상 지급 확인과 광고 성과 측정</td></tr>
+</table>
+<p>이 정보의 수집·이용 주체는 Google이며, <strong>앱은 광고 식별자를 따로 저장하지 않습니다.</strong></p>
+<p><strong>iOS에서는 앱을 처음 켤 때 추적 권한(App Tracking Transparency)을 여쭤봅니다.</strong></p>
+<ul>
+  <li><strong>허용</strong>하면 IDFA(광고 식별자)를 이용해 관심사에 맞는 광고가 표시됩니다.</li>
+  <li><strong>거부</strong>하면 IDFA를 수집하지 않으며, 관심사와 무관한 광고가 표시됩니다.</li>
+  <li>어느 쪽을 고르셔도 <strong>앱의 모든 기능을 그대로 이용할 수 있습니다.</strong> 선택은 기기 설정 &gt; 개인정보 보호 및 보안 &gt; 추적에서 언제든 바꿀 수 있습니다.</li>
+</ul>
+<p>Android 광고 ID는 <strong>기기 설정 &gt; Google &gt; 광고</strong>에서 언제든 초기화하거나 삭제할 수 있습니다.</p>
+<p>Google의 광고 데이터 처리에 관한 설명: <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a></p>
+
+<h2>3. 위치·활동 정보</h2>
+<table>
+  <tr><th>정보</th><th>이용 목적</th><th>저장</th></tr>
+  <tr><td>위치 (GPS)</td><td>산책 거리 측정, 현재 지역명·날씨 표시</td><td>이동 거리로만 환산해 기기에 저장. 좌표 자체는 보관하지 않음</td></tr>
+  <tr><td>걸음 수 (신체 활동)</td><td>산책 보상 계산</td><td>기기</td></tr>
+</table>
+<p>화면이 꺼진 동안에도 산책 거리를 이어서 재려면 백그라운드 위치 권한이 필요합니다. 권한을 주지 않아도 앱의 나머지 기능은 이용할 수 있으며, 산책은 걸음 수만으로 동작합니다.</p>
+
+<h2>4. 수집하지 않는 정보</h2>
+<ul>
+  <li>이름, 생년월일, 전화번호, 이메일 주소 등 이용자 본인의 식별 정보</li>
+  <li>연락처, 통화 기록, 문자메시지</li>
+  <li>앱 사용 통계·분석 데이터 — 앱은 별도의 분석 도구(Google Analytics 등)를 쓰지 않습니다</li>
+</ul>
+<p>광고 표시에 쓰이는 정보는 <strong>2-6. 광고</strong>를 참고해 주세요.</p>
+
+<h2>5. 접근 권한</h2>
+<table>
+  <tr><th>권한</th><th>필수 여부</th><th>용도</th></tr>
+  <tr><td>위치</td><td>선택</td><td>산책 거리 측정, 지역 날씨 표시</td></tr>
+  <tr><td>신체 활동</td><td>선택</td><td>산책 걸음 수 측정</td></tr>
+  <tr><td>카메라</td><td>선택</td><td>반려동물·커뮤니티 사진 촬영</td></tr>
+  <tr><td>사진/미디어</td><td>선택</td><td>갤러리에서 사진 선택</td></tr>
+  <tr><td>알림</td><td>선택</td><td>산책·돌보기 안내</td></tr>
+</table>
+<p>선택 권한은 허용하지 않아도 앱의 나머지 기능을 이용할 수 있습니다. 권한은 기기 설정 &gt; 앱 &gt; heeheehoho에서 언제든 변경할 수 있습니다.</p>
+
+<h2>6. 처리 위탁 및 국외 이전</h2>
+<table>
+  <tr><th>수탁자</th><th>위탁 내용</th></tr>
+  <tr><td>Google LLC (Firebase)</td><td>닉네임·커뮤니티 게시물의 저장과 사진 보관</td></tr>
+  <tr><td>Google LLC (AdMob)</td><td>보상형 광고 송출과 광고 성과 측정</td></tr>
+</table>
+<p>Firebase와 AdMob은 Google이 운영하는 서비스로, 데이터가 국외 서버에서 처리·보관될 수 있습니다. 앱 이용은 이에 대한 동의를 포함합니다.</p>
+<p>기상청 API는 좌표를 조회에만 사용하며 별도 위탁 관계가 아닙니다.</p>
+
+<h2>7. 보관 및 파기</h2>
+<ul>
+  <li><strong>기기 안 데이터</strong>: 별도 보관 기간을 두지 않으며, <strong>앱을 삭제하면 함께 삭제됩니다.</strong> 개발자는 이 데이터를 보관하거나 복구할 수 없습니다.</li>
+  <li><strong>커뮤니티 게시물과 사진</strong>: 삭제하기 전까지 보관됩니다. 내가 쓴 글은 앱에서 직접 지울 수 있으며(게시물 오른쪽 위 ··· &gt; 게시물 삭제), 이때 사진도 함께 삭제됩니다. 앱에서 지우기 어려운 경우 아래 이메일로 요청해 주시면 확인 후 지체 없이 삭제합니다.</li>
+  <li><strong>닉네임·프로필·익명 식별자</strong>: 삭제를 원하시면 이메일로 요청해 주세요. 앱을 삭제하면 기기의 식별자는 사라지지만, 서버에 남은 닉네임 예약과 명부는 요청 시 지워드립니다.</li>
+</ul>
+
+<h2>8. 아동의 개인정보</h2>
+<p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동으로부터 개인정보를 수집하지 않습니다.</p>
+
+<h2>9. 이용자의 권리</h2>
+<p>기기에 저장된 데이터는 이용자가 직접 열람·수정·삭제할 수 있습니다. 전체를 지우려면 앱을 삭제하거나 기기 설정에서 앱 데이터를 지우면 됩니다. 커뮤니티 게시물은 앱에서 직접 삭제할 수 있고, 닉네임의 열람·삭제는 아래 이메일로 요청하실 수 있습니다.</p>
+
+<h2>10. 개인정보처리방침의 변경</h2>
+<p>법령이나 앱 기능이 바뀌어 본 방침을 변경할 경우, 변경 내용과 시행일을 이 페이지에 게시합니다. 수집 항목이 늘어나는 등 중요한 변경이 있을 때에는 앱 안에서 별도로 안내합니다.</p>
+
+<h2>11. 문의</h2>
+<p>개인정보 관련 문의·삭제 요청은 아래로 연락해 주세요.</p>
+<ul>
+  <li>이메일: <a href="mailto:ehsrkdl96@gmail.com">ehsrkdl96@gmail.com</a></li>
+</ul>
+
+<footer>heeheehoho</footer>
+
+</body>
+</html>
